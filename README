@@ -1,9 +1,18 @@
-# Large population sizes minimize growth and collateral sensitivity trade-offs during antibiotic resistance development in an antibiotic-specific manner
-This project contains the code for a phenotype-structured in silico model that simulates bacterial resistance evolution across population sizes. The repository has five models that implement the same evolutionary framework with slightly varying input parameters. Each model is tailored for the pharmacodynamic parameters of one specific antibiotic (CLI, LVX or OXA), depicted with _AB below. 
-The first model is baseline_AB.py which replicates the conditions of the in vitro evolution experiment for a population size of 109 and 1011 cells.
-The second model is equal_BN_AB.py which is a variation of baseline_AB.py in which the bottleneck strength of the small population is set to 0.1, so that the absolute number of cells transferred to the next cycle is the same as for the large population for which the bottleneck strength remains 0.001.
-The third model is equal_µ_AB.py which is a variation of baseline baseline_AB.py in which the mutation rate of the small population is set to 5*10-7, so that the mutational supply is the same as for the large population for which the mutation rate remains 5*109.
-The fourth model is pop_size_AB.py which uses the conditions outlined in baseline_AB.py but screens the evolutionary outcomes over population sizes ranging from 103 to 1012 cells.
-The fifth model is µ-a_AB.py and evaluates model robustness to the parameters mutation rate µ and strength of the relationship between fitness cost and resistance a.
+# Large population sizes reduce growth and collateral sensitivity trade-offs during antibiotic resistance development in an antibiotic-specific manner
+This project contains the code for a phenotype-structured in silico model that simulates bacterial resistance evolution across population sizes. The repository features five models that implement the same evolutionary framework with slightly varying input parameters. Each model is tailored for the pharmacodynamic parameters of one specific antibiotic (CLI, LVX, or OXA), depicted with _AB below.
+
+baseline_AB.py: Replicates the conditions of the in vitro evolution experiment for a population size of 10^9 and 10^11 cells.
+equal_BN_AB.py: A variation of the baseline model in which the bottleneck strength of the small population is set to 0.1, so that the absolute number of cells transferred to the next cycle is the same as for the large population (for which the bottleneck strength remains 0.001).
+equal_µ_AB.py: A variation of the baseline model in which the mutation rate of the small population is set to 5*10^-7, so that the mutational supply is the same as for the large population (for which the mutation rate remains 5*10^-9).
+pop_size_AB.py: Uses the conditions outlined in the baseline model but screens the evolutionary outcomes over population sizes ranging from 10^3 to 10^12 cells.
+µ-a_AB.py: Evaluates model robustness to the parameters mutation rate (µ) and strength of the relationship between fitness cost and resistance (a).
+
+Upon completion the script generates a single Excel file containing aggregated time-series data (means, median, and 95% confidence interavls across all simulated replicates for Population size (pop_mean_small, pop_mean_large), Antibiotic concentration (conc_mean_small), Resistance weighted by Minimum Inhibitory Concentration (res_mean_small), and Fitness costs (fit_mean_small)
+
+The scripts are operating system independent and have been tested on Windows 11.
+
+Software dependencies: Python 3.8 or higher.
+Python packages used: numpy (v1.23.5), scipy (v1.10.0), pandas (v1.5.3), matplotlib (v3.7.1), openpyxl (v3.1.2)
+
 Contact information: hans.steenackers@kuleuven.be 
 CC0-1.0 license 2026 
