@@ -1,4 +1,4 @@
-# Large population sizes reduce growth and collateral sensitivity trade-offs during antibiotic resistance development in an antibiotic-specific manner
+### Large population sizes reduce growth and collateral sensitivity trade-offs during antibiotic resistance development in an antibiotic-specific manner
 This project contains the code for a phenotype-structured in silico model that simulates bacterial resistance evolution across population sizes. The repository features five models that implement the same evolutionary framework with slightly varying input parameters. Each model is tailored for the pharmacodynamic parameters of one specific antibiotic (CLI, LVX, or OXA), depicted with _AB below.
 
 baseline_AB.py: Replicates the conditions of the in vitro evolution experiment for a population size of 10^9 and 10^11 cells.
