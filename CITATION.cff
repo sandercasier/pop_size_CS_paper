@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "Code for: Large population sizes reduce growth and collateral sensitivity trade-offs during antibiotic resistance development in an antibiotic-specific manner"
+title: "Phenotype-structured model of antibiotic resistance evolution"
+license: "CC0-1.0"
 authors:
   - family-names: "Casier"
     given-names: "Sander Kris"
